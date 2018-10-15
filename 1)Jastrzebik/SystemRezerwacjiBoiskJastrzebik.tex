@@ -68,28 +68,30 @@ $^{imie\ i\ nazwisko}$ \\\\ \hline
 \section {Wprowadzenie}
 
 \subsection {Cel dokumentu}
-Celem dokumentu jest przeprowadzenie analizy i określenie specyfikacji systemu umożliwiającego rezerwowanie boisk sportowych - Jastrzębik.
+Celem dokumentu jest przeprowadzenie analizy i określenie specyfikacji systemu umożliwiającego rezerwowanie boisk sportowych. Zaprezentowane zostały opisy wymaganych funkcjonalności oraz przypisane uprawnienia dla danych użytkowników systemu.
 
 \subsection {Zakres produktu}
-System skierowany jest do wszystkich osób powyżej 12 roku życia, zamieszkałych lub przebywających na terenie Polski, zainteresowanych wynajęciem boiska sportowego w Łodzi w celu aktywnego spędzenia czasu. 
+System skierowany będzie do dwóch grup użytkowników:
+\begin{itemize}
+	\item Wszystkich osób powyżej 12 roku życia, zamieszkałych lub przebywających na terenie Polski, zainteresowanych wynajęciem boiska sportowego w Łodzi w celu aktywnego spędzenia czasu. Otrzymają ograniczony dostęp do funkcjonalności systemu.
+	\item Animatorów sportowych sprawujących pieczę nad danym boiskiem. Będą oni zarządzać system i otrzymają pełen zakres uprawnień.
+\end{itemize}
 
 \subsection {Definicje, akronimy i skróty}
-Stroną udostępniającą wynajęcie boiska sportowego w Łodzi jest Państwo Polskie.
-Stroną rezerwującą boisko sportowe jest osoba powyżej 12 roku życia. 
+Stroną udostępniającą wynajęcie boiska sportowego w Łodzi będzie Państwo Polskie.
+Stroną rezerwującą boisko sportowe będzie osoba powyżej 12 roku życia. 
 
 \subsection {Odwołania do literatury}
-Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest: www.ostroleka.pl/boiska/Menager.html
-archiwum.kalety.pl/orlik/index.php
+Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest ostroleka.pl/boiska
 
 \subsection {Omówienie dokumentu}
-Dokument składa się z czterech części. Część pierwsza  została podzielona na pięć podsekcji i poświęcona jest wprowadzeniu do systemu Jastrzębik. Ma ona za zadanie przygotować do zaznajomienia się z podstawowymi definicjami związanymi z systemem Jastrzębik. Wyjaśnia jaki jest cel dokumentu, do kogo skierowany jest produkt, objaśnia dane definicje oraz akronimy, na przykładzie źródła elektronicznego odwołuje się do istniejącego już portalu umożliwiającego rezerwację boisk. 
-\\\indent
-Druga część dokumentu zawiera ogólny zarys systemu Jastrzębik. Częśc ta została podzielona na pięć podsekcji, które objaśniają kontekst funkcjonowania produktu, a także jego główne funkcje, przedstawiają charakterystykę użytkowników oraz nałożone ograniczenia wraz z założeniami i zależnościami występującymi w programie.
-\\\indent
-Część trzecia poświęcona jest wymaganiom funkcjonalnym występującym w systemie Jastrzębik. Opisuje czynności i operacje wykonywane przez priodukt.
-\\\indent
-Część czwarta przedstawia wymagania niefunkcjonalne pojawiające się w systemie. Opisuje ograniczenia, przy których produkt powinien realizować swoje funkcje.
-
+Dokument opisuje w szczegółowy sposób zadania i wymagane funkcjonalności systemu. Składa się z czterech części.
+\begin{itemize}
+	\item Część pierwsza  została podzielona na pięć podsekcji i poświęcona jest przedstawieniu idei systemu. Ma ona za zadanie przygotować do zaznajomienia się z podstawowymi definicjami związanymi z systemem. Wyjaśnia jaki jest cel dokumentu, do kogo skierowany jest produkt, objaśnia dane definicje oraz akronimy, na przykładzie źródła elektronicznego odwołuje się do istniejącego już portalu umożliwiającego rezerwację boisk. 
+	\item Druga część dokumentu zawiera ogólny zarys systemu Jastrzębik. Część ta została podzielona na pięć podsekcji, które objaśniają kontekst funkcjonowania produktu, a także jego główne funkcje, przedstawiają charakterystykę użytkowników oraz nałożone ograniczenia wraz z założeniami i zależnościami występującymi w systemie.
+	\item Część trzecia poświęcona jest wymaganiom funkcjonalnym występującym w systemie. Opisuje czynności i operacje wykonywane przez priodukt.
+	\item Część czwarta przedstawia wymagania niefunkcjonalne pojawiające się w systemie. Opisuje ograniczenia, przy których produkt powinien realizować swoje funkcje.
+\end{itemize}
 
 \section {Opis ogólny}
 
@@ -102,31 +104,46 @@ Docelowymi użytkownikami rezerwującymi boiska sportowe są osoby powyżej 12 r
 Użytkownikami odpowiedzialnymi za rozpatrywanie wpływających rezerwacji będą wcześniej wybrani animatorzy boisk. Będą oni posiadali pełne uprawnienia w systemie - zatwierdzanie lub odrzucanie rezerwacji, uaktualnianie informacji na temat boisk, ustalanie harmonogramu dostępności boisk.
 
 \subsection {Główne funkcje produktu tu jakos musze ogarnac te kropki chyba}
-Głównymi funkcjami systemu będą poniżej wypisane zadania: 
-\\\indent{•} Możliwość złożenia elektronicznego wniosku o rezerwację boiska sportowego
-\\\indent{•} Sprawdzanie stanu złożonej wcześniej rezerwacji
-\\\indent{•} Modyfikacja rezerwacji - edytowanie, anulowanie wniosku
-\\\indent{•} Wgląd do harmonogramu dostępności boisk
- 
+\begin{itemize}
+	\item Zarejestrowanie się w systemie.
+	\item Możliwość złożenia elektronicznego wniosku o rezerwację boiska sportowego.
+	\item Możliwość złożenia elektronicznego wniosku o rezerwację boiska sportowego.
+	\item Sprawdzanie stanu złożonej wcześniej rezerwacji.
+	\item Modyfikacja rezerwacji - edytowanie, anulowanie wniosku.
+	\item Wgląd do harmonogramu dostępności boisk.
+\end{itemize} 
 
 \subsection {Ograniczenia}
-Nie wiem czy tu, ale moze gdzies indziej:
-Stosowanie plików cookies i innych technologii
-Wraz z naszymi partnerami stosujemy pliki cookies (tzw. ciasteczka) i inne pokrewne technologie, które mają na celu:
-
-    Zapewnienie bezpieczeństwa podczas korzystania z naszych stron
-    Ulepszenie świadczonych przez nas usług poprzez wykorzystanie danych w celach analitycznych i statystycznych
-    Poznanie Twoich preferencji na podstawie sposobu korzystania z naszych serwisów
+System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z 27.04.2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz. U. UE. L. z 2016 r. Nr 119, str. 1).
 
 \subsection {Założenia i zależności}
-Warunkiem złożenia elektronicznej rezerwacji będzie wcześniejsze zarejestrowanie się w systemie, a następnie uwierzytelnienie. Tylko osoby, który ukończyły 12 rok życia będą mogły się zarejestrować. 
-\\\indent Nie będzie możliwe zarezerwowanie boiska, jeśli w danym momencie jest już wynajęte.
-\\\indent Dwukrotna nieobecność podczas zarezerwowanego terminu będzie skutkować zablokowaniem możliwości rezerwacji boisk na okres 3 miesięcy. 
+\begin{itemize}
+	\item Warunkiem złożenia elektronicznej rezerwacji będzie 			wcześniejsze zarejestrowanie się w systemie, a następnie uwierzytelnienie. Tylko osoby, który ukończyły 12 rok życia będą mogły się zarejestrować
+	\item Nie będzie możliwe zarezerwowanie boiska, jeśli w danym momencie jest już wynajęte.
+	\item Nie będzie możliwe zarezerwowanie boiska w godzinach 22-6.
+	\item Nie będzie możliwe zarezerwowanie boiska w sezonie zimowym 1.12 - 28.02.
+	\item Dwukrotna nieobecność podczas zarezerwowanego terminu będzie skutkować zablokowaniem możliwości rezerwacji boisk na okres 3 miesięcy. 
+\end{itemize}
 
 \section {Wymagania funkcjonalne}
-
+\begin{enumerate}
+	\item Rejestracja użytkowników.
+	\item Logowanie oraz wylogowanie się z systemu.
+	\item Wgląd do harmonogramu dostępności boisk.
+	\item Modyfikacja rejestracji.
+	\item Anulowanie rejestracji.
+	\item Rezerwacja wybranego boiska.
+	\item Dostęp do zdjęć dostępnych boisk sportowych.
+	\item Dostęp do panelu kontaktu - możliwość elektronicznego skontaktowania się z animatorami.
+	\item 
+\end{enumerate}
 
 \section {Wymagania niefunkcjonalne}
-
+\begin{enumerate}
+	\item Użytkownik nie ma możliwości wglądu kont innych użytkowników.
+	\item Uzytkownik podczas rejestracji musi mieć ukończone co najmniej 12 lat.
+	\item Użytkownik nieuprzywilejowany nie może wprowadzać zmian w rejestracjach innego użytkownika.
+	\item 
+\end{enumerate}
 
 \end{document}
