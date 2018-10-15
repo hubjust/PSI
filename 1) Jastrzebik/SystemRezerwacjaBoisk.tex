@@ -1,0 +1,132 @@
+\documentclass[a4paper, portrait,11pt]{article}
+\usepackage[verbose,a4paper,tmargin=3cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\frenchspacing
+\pagestyle{fancyplain}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\degree}{\ensuremath{^{\circ}}} 
+\fancyfoot[L]{PSI: Justyna Hubert i Karol Podlewski}
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\begin{tabular}{rl}
+\begin{tabular}{|r|}
+\hline \\
+\large{\underline{210200~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+$^{numer\ indeksu}$\\
+\large {\underline{Justyna Hubert~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+$^{imie\ i\ nazwisko}$ \\\\ \hline
+\end{tabular} 
+&
+\begin{tabular}{|r|}
+\hline \\
+\large{\underline{210294~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+$^{numer\ indeksu}$\\
+\large {\underline{Karol Podlewski~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+$^{imie\ i\ nazwisko}$ \\\\ \hline
+\end{tabular} 
+
+\end{tabular}
+~\\~\\~\\ 
+\end{center}
+\begin{tabular}{ll}
+\LARGE{\textbf{Data}}& \LARGE{2018-10-12}\\
+\LARGE{\textbf{Kierunek}}& \LARGE{Informatyka}\\
+\LARGE{\textbf{Rok akademicki}}& \LARGE{2018/19} \\
+\LARGE{\textbf{Semestr}}& \LARGE{5} \\
+\LARGE{\textbf{Specjalizacja}}& \LARGE{IOAD} \\
+\LARGE{\textbf{Grupa dziekańska}}& \LARGE{3} \\\\\\\\\\
+\end{tabular}
+
+\begin{center}
+\textbf{\LARGE{\\~\\Projektowanie Systemów\\Informatycznych\\~\\~\\}}
+\end{center}
+
+
+\begin{center}
+\textbf{\Huge{System rezerwacji boisk sportowych:\\~\\ JASTRZĘBIK}} \\~\\
+\end{center}
+
+\end{titlepage}
+\setcounter{page}{2}
+
+\section {Wprowadzenie}
+
+\subsection {Cel dokumentu}
+Celem dokumentu jest przeprowadzenie analizy i określenie specyfikacji systemu umożliwiającego rezerwowanie boisk sportowych - Jastrzębik.
+
+\subsection {Zakres produktu}
+System skierowany jest do wszystkich osób powyżej 12 roku życia, zamieszkałych lub przebywających na terenie Polski, zainteresowanych wynajęciem boiska sportowego w Łodzi w celu aktywnego spędzenia czasu. 
+
+\subsection {Definicje, akronimy i skróty}
+Stroną udostępniającą wynajęcie boiska sportowego w Łodzi jest Państwo Polskie.
+Stroną rezerwującą boisko sportowe jest osoba powyżej 12 roku życia. 
+
+\subsection {Odwołania do literatury}
+Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest: www.ostroleka.pl/boiska/Menager.html
+archiwum.kalety.pl/orlik/index.php
+
+\subsection {Omówienie dokumentu}
+Dokument składa się z czterech części. Część pierwsza  została podzielona na pięć podsekcji i poświęcona jest wprowadzeniu do systemu Jastrzębik. Ma ona za zadanie przygotować do zaznajomienia się z podstawowymi definicjami związanymi z systemem Jastrzębik. Wyjaśnia jaki jest cel dokumentu, do kogo skierowany jest produkt, objaśnia dane definicje oraz akronimy, na przykładzie źródła elektronicznego odwołuje się do istniejącego już portalu umożliwiającego rezerwację boisk. 
+\\\indent
+Druga część dokumentu zawiera ogólny zarys systemu Jastrzębik. Częśc ta została podzielona na pięć podsekcji, które objaśniają kontekst funkcjonowania produktu, a także jego główne funkcje, przedstawiają charakterystykę użytkowników oraz nałożone ograniczenia wraz z założeniami i zależnościami występującymi w programie.
+\\\indent
+Część trzecia poświęcona jest wymaganiom funkcjonalnym występującym w systemie Jastrzębik. Opisuje czynności i operacje wykonywane przez priodukt.
+\\\indent
+Część czwarta przedstawia wymagania niefunkcjonalne pojawiające się w systemie. Opisuje ograniczenia, przy których produkt powinien realizować swoje funkcje.
+
+
+\section {Opis ogólny}
+
+\subsection {Kontekst funkcjonowania}
+System Jastrzębik umożliwiać będzie rezerwację wybranego boiska sportowego znajdującego się na terenie miasta Łodź. W celu zarejestrowania się w systemie użytkownik będzie zobowiązany do podania swojego imienia, nazwiska, numeru PESEL, miejsca zamieszkania oraz numeru telefonu lub adresu mailowego. Po wykonaniu uwierzytelnienia użytkownik będzie miał możliwość złożenia elektronicznego wniosku wynajęcia danego boiska sportowego o wybranej porze. Wniosek rozpatrywany będzie zgodnie z regulaminem obiektu, wg daty złożenia wniosku i spełnieniem wymogów formalnych, bezpośrednio przez animatorów przypisanych do danych boisk sportowych. Pierwszeństwo rezerwacji otrzymają osoby korzystające z boisk w ubiegłych miesiącach. Animatorzy będą upoważnieni do wglądu w szereg szczegółowych informacji o rezerwacjach, rezerwujących oraz będą posiadali możliwość wprowadzania zmian w harmonogramie boisk. 
+
+\subsection {Charakterystyka użytkowników}
+Docelowymi użytkownikami rezerwującymi boiska sportowe są osoby powyżej 12 roku życia zamieszkałe lub przebywające na terenie Polski. Będą oni posiadali ograniczone uprawnienia w systemie - możliwość złożenia wniosku o wynajęcie danego boiska i ewentualne późniejsze jego edytowanie lub anulowanie.
+\\\indent
+Użytkownikami odpowiedzialnymi za rozpatrywanie wpływających rezerwacji będą wcześniej wybrani animatorzy boisk. Będą oni posiadali pełne uprawnienia w systemie - zatwierdzanie lub odrzucanie rezerwacji, uaktualnianie informacji na temat boisk, ustalanie harmonogramu dostępności boisk.
+
+\subsection {Główne funkcje produktu tu jakos musze ogarnac te kropki chyba}
+Głównymi funkcjami systemu będą poniżej wypisane zadania: 
+\\\indent{•} Możliwość złożenia elektronicznego wniosku o rezerwację boiska sportowego
+\\\indent{•} Sprawdzanie stanu złożonej wcześniej rezerwacji
+\\\indent{•} Modyfikacja rezerwacji - edytowanie, anulowanie wniosku
+\\\indent{•} Wgląd do harmonogramu dostępności boisk
+ 
+
+\subsection {Ograniczenia}
+Nie wiem czy tu, ale moze gdzies indziej:
+Stosowanie plików cookies i innych technologii
+Wraz z naszymi partnerami stosujemy pliki cookies (tzw. ciasteczka) i inne pokrewne technologie, które mają na celu:
+
+    Zapewnienie bezpieczeństwa podczas korzystania z naszych stron
+    Ulepszenie świadczonych przez nas usług poprzez wykorzystanie danych w celach analitycznych i statystycznych
+    Poznanie Twoich preferencji na podstawie sposobu korzystania z naszych serwisów
+
+\subsection {Założenia i zależności}
+Warunkiem złożenia elektronicznej rezerwacji będzie wcześniejsze zarejestrowanie się w systemie, a następnie uwierzytelnienie. Tylko osoby, który ukończyły 12 rok życia będą mogły się zarejestrować. 
+\\\indent Nie będzie możliwe zarezerwowanie boiska, jeśli w danym momencie jest już wynajęte.
+\\\indent Dwukrotna nieobecność podczas zarezerwowanego terminu będzie skutkować zablokowaniem możliwości rezerwacji boisk na okres 3 miesięcy. 
+
+\section {Wymagania funkcjonalne}
+
+
+\section {Wymagania niefunkcjonalne}
+
+
+\end{document}
