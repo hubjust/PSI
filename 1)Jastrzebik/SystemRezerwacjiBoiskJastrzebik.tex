@@ -1,4 +1,4 @@
-\documentclass[a4paper, portrait,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[verbose,a4paper,tmargin=3cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
@@ -11,6 +11,8 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
+\usepackage{hyperref} 
+\usepackage{xcolor}
 \frenchspacing
 \pagestyle{fancyplain}
 \fancyhf{}
@@ -20,6 +22,7 @@
 \fancyfoot[L]{PSI: Justyna Hubert i Karol Podlewski}
 \fancyfoot[R]{\thepage\ / \pageref{LastPage}}
 
+
 \begin{document}
 
 \begin{titlepage}
@@ -27,17 +30,17 @@
 \begin{tabular}{rl}
 \begin{tabular}{|r|}
 \hline \\
-\large{\underline{210200~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+\large{\underline{210200~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
 $^{numer\ indeksu}$\\
-\large {\underline{Justyna Hubert~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+\large {\underline{Justyna Hubert~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
 $^{imie\ i\ nazwisko}$ \\\\ \hline
 \end{tabular} 
 &
 \begin{tabular}{|r|}
 \hline \\
-\large{\underline{210294~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+\large{\underline{210294~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
 $^{numer\ indeksu}$\\
-\large {\underline{Karol Podlewski~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
+\large {\underline{Karol Podlewski~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} }\\
 $^{imie\ i\ nazwisko}$ \\\\ \hline
 \end{tabular} 
 
@@ -82,7 +85,7 @@ Stroną udostępniającą wynajęcie boiska sportowego w Łodzi będzie Państwo
 Stroną rezerwującą boisko sportowe będzie osoba powyżej 12 roku życia. 
 
 \subsection {Odwołania do literatury}
-Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest ostroleka.pl/boiska
+Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest strona  \href{https://www.ostroleka.pl/boiska/}{\textcolor{blue}{Urzędu Miejskiego Ostrołęki}}.
 
 \subsection {Omówienie dokumentu}
 Dokument opisuje w szczegółowy sposób zadania i wymagane funkcjonalności systemu. Składa się z czterech części.
@@ -103,7 +106,7 @@ Docelowymi użytkownikami rezerwującymi boiska sportowe są osoby powyżej 12 r
 \\\indent
 Użytkownikami odpowiedzialnymi za rozpatrywanie wpływających rezerwacji będą wcześniej wybrani animatorzy boisk. Będą oni posiadali pełne uprawnienia w systemie - zatwierdzanie lub odrzucanie rezerwacji, uaktualnianie informacji na temat boisk, ustalanie harmonogramu dostępności boisk.
 
-\subsection {Główne funkcje produktu tu jakos musze ogarnac te kropki chyba}
+\subsection {Główne funkcje produktu}
 \begin{itemize}
 	\item Zarejestrowanie się w systemie.
 	\item Możliwość złożenia elektronicznego wniosku o rezerwację boiska sportowego.
@@ -122,7 +125,7 @@ System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejs
 	\item Nie będzie możliwe zarezerwowanie boiska, jeśli w danym momencie jest już wynajęte.
 	\item Nie będzie możliwe zarezerwowanie boiska w godzinach 22-6.
 	\item Nie będzie możliwe zarezerwowanie boiska w sezonie zimowym 1.12 - 28.02.
-	\item Dwukrotna nieobecność podczas zarezerwowanego terminu będzie skutkować zablokowaniem możliwości rezerwacji boisk na okres 3 miesięcy. 
+	\item Dwukrotna nieobecność podczas zarezerwowanego terminu będzie skutkować zablokowaniem możliwości rezerwacji boisk na okres 30 dni.
 \end{itemize}
 
 \section {Wymagania funkcjonalne}
@@ -135,15 +138,18 @@ System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejs
 	\item Rezerwacja wybranego boiska.
 	\item Dostęp do zdjęć dostępnych boisk sportowych.
 	\item Dostęp do panelu kontaktu - możliwość elektronicznego skontaktowania się z animatorami.
-	\item 
+	\item Możliwość wystawienie oceny danego animatora/użytkownika. 
+	\item Zgłoszenie problemu na danym boisku - na przykład uszkodzona murawa, siatka ochronna.
 \end{enumerate}
 
 \section {Wymagania niefunkcjonalne}
 \begin{enumerate}
-	\item Użytkownik nie ma możliwości wglądu kont innych użytkowników.
+	\item Użytkownik nie ma możliwości wglądu w konta innych użytkowników.
 	\item Uzytkownik podczas rejestracji musi mieć ukończone co najmniej 12 lat.
 	\item Użytkownik nieuprzywilejowany nie może wprowadzać zmian w rejestracjach innego użytkownika.
-	\item 
+	\item Jeden użytkownik może posiadać tylko jedno konto.
+	\item W przypadku dwóch nieobecnośći przy zarezerwowanym boisku użytkownik ma blokowaną możliwość rezerwowania boisk na okres 30 dni.
+	\item Portal dostępny jest także w języku angielskim.
 \end{enumerate}
 
 \end{document}
