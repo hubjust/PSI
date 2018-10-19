@@ -74,15 +74,22 @@ $^{imie\ i\ nazwisko}$ \\\\ \hline
 Celem dokumentu jest przeprowadzenie analizy i określenie specyfikacji systemu umożliwiającego rezerwowanie boisk sportowych. Zaprezentowane zostały opisy wymaganych funkcjonalności oraz przypisane uprawnienia dla danych użytkowników systemu.
 
 \subsection {Zakres produktu}
-System skierowany będzie do dwóch grup użytkowników:
+System skierowany będzie do trzech grup użytkowników:
 \begin{itemize}
 	\item Wszystkich osób powyżej 12 roku życia, zamieszkałych lub przebywających na terenie Polski, zainteresowanych wynajęciem boiska sportowego w Łodzi w celu aktywnego spędzenia czasu. Otrzymają ograniczony dostęp do funkcjonalności systemu.
-	\item Animatorów sportowych sprawujących pieczę nad danym boiskiem. Będą oni zarządzać system i otrzymają pełen zakres uprawnień.
+	\item Animatorów sportowych sprawujących pieczę nad danym boiskiem. Będą oni zarządzać system rezerwacji i otrzymają szeroki zakres uprawnień.
+	\item Administratorów odpowiedzialnych za funkcjonowanie całego systemu. Będą oni posiadać pełen zakres uprawnień.
 \end{itemize}
 
 \subsection {Definicje, akronimy i skróty}
-Stroną udostępniającą wynajęcie boiska sportowego w Łodzi będzie Państwo Polskie.
-Stroną rezerwującą boisko sportowe będzie osoba powyżej 12 roku życia. 
+\begin{itemize}
+	\item Animator - osoba sprawująca pieczę nad danym boiskiem sportowym odpowiedzialna za udostępnianie boisk, przebywająca w izbie animatorów.
+	\item Izba animatorów - wyznaczone pomieszczenie dla animatorów na terenie boiska.
+	\item Administrator - osoba sprawująca władzę nad systemem. Posiada pełen zakres uprawnień.
+	\item Boisko - obiekt sportowy z wydzielonym terenem. Może zostać zarezerwowane. Występują boiska do koszykówki oraz piłki nożnej.
+	\item Rezerwacja - jest to wynajęcie danego boiska sportowego na okres od 60 do 120 minut. Możliwe jest wykonanie tylko jednej rezerwacji w ciągu dnia. Rezerwacja musi zostać wykonana minimum 24 godziny wcześniej. Odwołanie rezerwacji musi zostać wykonane minimum 12 godzin wcześniej. Rezerwacja jest bezpłatna.
+	\item Użytkownik - osoba powyżej 12 roku życia.
+\end{itemize}
 
 \subsection {Odwołania do literatury}
 Przykładem istniejącego portalu umożliwiającego rezerwację boiska jest strona  \href{https://www.ostroleka.pl/boiska/}{\textcolor{blue}{Urzędu Miejskiego Ostrołęki}}.
@@ -99,12 +106,16 @@ Dokument opisuje w szczegółowy sposób zadania i wymagane funkcjonalności sys
 \section {Opis ogólny}
 
 \subsection {Kontekst funkcjonowania}
-System Jastrzębik umożliwiać będzie rezerwację wybranego boiska sportowego znajdującego się na terenie miasta Łodź. W celu zarejestrowania się w systemie użytkownik będzie zobowiązany do podania swojego imienia, nazwiska, numeru PESEL, miejsca zamieszkania oraz numeru telefonu lub adresu mailowego. Po wykonaniu uwierzytelnienia użytkownik będzie miał możliwość złożenia elektronicznego wniosku wynajęcia danego boiska sportowego o wybranej porze. Wniosek rozpatrywany będzie zgodnie z regulaminem obiektu, wg daty złożenia wniosku i spełnieniem wymogów formalnych, bezpośrednio przez animatorów przypisanych do danych boisk sportowych. Pierwszeństwo rezerwacji otrzymają osoby korzystające z boisk w ubiegłych miesiącach. Animatorzy będą upoważnieni do wglądu w szereg szczegółowych informacji o rezerwacjach, rezerwujących oraz będą posiadali możliwość wprowadzania zmian w harmonogramie boisk. 
+System Jastrzębik umożliwiać będzie rezerwację wybranego boiska sportowego znajdującego się na terenie miasta Łodź. Wynajęcie boiska będzie możliwe na okres od 60 do 120 minut. Rezerwację będzie można wykonać na 24 godziny przed planowanym wynajęciem boiska wcześniej.Odwołanie rezerwacji  będzie możliwe do 12 godzin przed planowanym wynajęciem boiska. Rezerwacja boiska jest bezpłatna. Dokonując rezerwacji użytkownik będzie zobowiązany do pozostawienia boiska w nienaruszonym stanie. W przypadku dokonania, bądź odkrycia szkody, użytkownik będzie zobowiązany do zgłoszenia szkody bezpośrednia do Animatora. 
+\\\indent W celu zarejestrowania się w systemie użytkownik będzie zobowiązany do podania swojego imienia, nazwiska, numeru PESEL, miejsca zamieszkania oraz numeru telefonu lub adresu mailowego. Po wykonaniu uwierzytelnienia użytkownik będzie miał możliwość złożenia elektronicznego wniosku wynajęcia danego boiska sportowego o wybranej porze. Wniosek rozpatrywany będzie zgodnie z regulaminem obiektu, wg daty złożenia wniosku i spełnieniem wymogów formalnych, bezpośrednio przez animatorów przypisanych do danych boisk sportowych. Pierwszeństwo rezerwacji otrzymają osoby korzystające z boisk w ubiegłych miesiącach. 
+\\\indent Animatorzy będą upoważnieni do wglądu w szereg szczegółowych informacji o rezerwacjach, rezerwujących oraz będą posiadali możliwość wprowadzania zmian w harmonogramie boisk. Będą sprawować pieczę nad boiskami sportowymi oraz będą odpowiedzialni za udostępnianie obiektów sportowych. Będą odpowiedzialni za odbieranie informacji na temat dokonanych szkód na terenie boiska.
+\\\indent Jakiekolwiek nieprawidłowości związane z funkcjonowaniem systemu będą rozpatrywane przez administratorów. 
 
 \subsection {Charakterystyka użytkowników}
 Docelowymi użytkownikami rezerwującymi boiska sportowe są osoby powyżej 12 roku życia zamieszkałe lub przebywające na terenie Polski. Będą oni posiadali ograniczone uprawnienia w systemie - możliwość złożenia wniosku o wynajęcie danego boiska i ewentualne późniejsze jego edytowanie lub anulowanie.
 \\\indent
-Użytkownikami odpowiedzialnymi za rozpatrywanie wpływających rezerwacji będą wcześniej wybrani animatorzy boisk. Będą oni posiadali pełne uprawnienia w systemie - zatwierdzanie lub odrzucanie rezerwacji, uaktualnianie informacji na temat boisk, ustalanie harmonogramu dostępności boisk.
+Użytkownikami odpowiedzialnymi za rozpatrywanie wpływających rezerwacji będą wcześniej wybrani animatorzy boisk. Będą oni posiadali szeroki zakres uprawnień w systemie - zatwierdzanie lub odrzucanie rezerwacji, uaktualnianie informacji na temat boisk, ustalanie harmonogramu dostępności boisk.
+\\\indent Użytkownikami odpowiedzialnymi za kontrolę nad funkcjonowaniem całego systemu będą administratorzy. Będą oni rozpatrywać wszelkie wykryte nieprawidłowości w produkcie. Otrzymają pełen zakres uprawnień.
 
 \subsection {Główne funkcje produktu}
 \begin{itemize}
@@ -149,6 +160,8 @@ System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejs
 	\item Użytkownik nieuprzywilejowany nie może wprowadzać zmian w rejestracjach innego użytkownika.
 	\item Jeden użytkownik może posiadać tylko jedno konto.
 	\item W przypadku dwóch nieobecnośći przy zarezerwowanym boisku użytkownik ma blokowaną możliwość rezerwowania boisk na okres 30 dni.
+	\item W przypadku dokonania lub odkrycia szkody na terenie boiska, użytkownik zobowiązany jest do natychmiastowego zgłoszenia takiego incydentu do animatora. 
+	\item W przypadku, gdy podczas użytkowania obiekt sportowy zostanie uszkodzony, rezerwujący zobowiązany jest do pokrycia kosztów naprawy lub wymiany. 
 	\item Portal dostępny jest także w języku angielskim.
 \end{enumerate}
 
