@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[verbose,a4paper,tmargin=3cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
+\usepackage[verbose,a4paper,tmargin=2cm,bmargin=2cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
 \usepackage{amsmath}
@@ -13,6 +13,7 @@
 \usepackage{listings}
 \usepackage{hyperref} 
 \usepackage{xcolor}
+\usepackage{tikz}
 \frenchspacing
 \pagestyle{fancyplain}
 \fancyhf{}
@@ -140,18 +141,43 @@ System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejs
 \end{itemize}
 
 \section {Wymagania funkcjonalne}
-\begin{enumerate}
-	\item Rejestracja użytkowników.
-	\item Logowanie oraz wylogowanie się z systemu.
-	\item Wgląd do harmonogramu dostępności boisk.
-	\item Modyfikacja rejestracji.
-	\item Anulowanie rejestracji.
-	\item Rezerwacja wybranego boiska.
-	\item Dostęp do zdjęć dostępnych boisk sportowych.
-	\item Dostęp do panelu kontaktu - możliwość elektronicznego skontaktowania się z animatorami.
-	\item Możliwość wystawienie oceny danego animatora/użytkownika. 
-	\item Zgłoszenie problemu na danym boisku - na przykład uszkodzona murawa, siatka ochronna.
-\end{enumerate}
+
+
+\begin{tabular}{|p{0.5\linewidth}|ccc|}
+\hline
+Wymaganie & Użytkownik & Animator & Administrator \\
+\hline
+\hline
+1. Rejestracja & \checkmark & & \checkmark * \\
+\hline
+2. Logowanie oraz wylogowanie się z systemu & \checkmark & \checkmark & \checkmark \\
+\hline
+3. Wgląd do harmonogramu dostępności boisk & \checkmark & \checkmark & \checkmark \\
+\hline
+4. Modyfikacja rejestracji & \checkmark & & \checkmark \\
+\hline
+5. Anulowanie rejestracji & \checkmark & \checkmark & \checkmark \\
+\hline
+6. Rezerwacja wybranego boiska & \checkmark & \checkmark & \checkmark \\
+\hline
+7. Blokada dostępności danego boiska & & \checkmark & \checkmark \\
+\hline
+8. Dostęp do zdjęć dostępnych boisk sportowych & \checkmark & \checkmark & \checkmark \\
+\hline
+9. Dostęp do panelu kontaktu & \checkmark & \checkmark & \checkmark \\
+\hline
+10. Wystawienie oceny dla danego użytkownika & & \checkmark & \checkmark \\
+\hline 
+11. Wystawienie oceny dla danego animatora & \checkmark & & \checkmark \\
+\hline 
+12. Zgłoszenie problemu na danym boisku & \checkmark & \checkmark & \checkmark \\
+\hline 
+13. Blokada konta użytkownika & & \checkmark ** & \checkmark \\
+\hline
+\end{tabular}
+\\ \\ \\
+\small{*  Administrator może tworzyć konta innych administratorów oraz animatorów, ale nie da się utworzyć samemu konta administratora
+\\ \\ ** Administrator musi zatwierdzić blokadę użytkownika}
 
 \section {Wymagania niefunkcjonalne}
 \begin{enumerate}
