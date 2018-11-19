@@ -114,12 +114,166 @@ Projektowany system będzie odpowiedzialny za obsługę składanych zamówień i
 
 \subsection {Diagram przypadków użycia}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{Diagramy/PrzypadkiUzycia/Admin.jpeg}
+\caption{Diagram przypadku użycia przez administratora.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{Diagramy/PrzypadkiUzycia/Pracownik.jpeg}
+\caption{Diagram przypadku użycia przez pracownika.}
+
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=11cm]{Diagramy/PrzypadkiUzycia/Zalogowany.jpeg}
+\caption{Diagram przypadku użycia przez zalogowanego użytkownika.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=11cm]{Diagramy/PrzypadkiUzycia/Niezalogowany.jpeg}
+\caption{Diagram przypadku użycia przez niezalogowanego użytkownika.}
+\end{figure}
 
 \section {Hierarchiczny model funkcji systemu informatycznego}
 \subsection {Diagram hierarchii funkcji.}
+
 \begin{figure}[h]
 \includegraphics[width=16cm]{Diagramy/HierarchiiFunkcji.png}
-\caption{Diagram hierarchii funkcji}
+\caption{Diagram hierarchii funkcji.}
+\centering
+\end{figure}
+
+\subsection {Opis diagramu hierarchii funkcji.}
+\begin{enumerate}
+	\item Obsługa formularza kontaktowego
+	\begin{itemize}
+		\item Obsługa reklamacji
+		\begin{list}{}
+			\item Opis: Klient otrzymuje potwierdzenie/odrzucenie reklamacji
+			\item Dane wejściowe: Wiadomość od klienta
+			\item Wynik: Przy potwierdzeniu reklamacji - zwrot kosztów dla klienta, przy odrzuceniu reklamacji - wiadomość zwrotna dla klienta. 
+		\end{list}
+		
+		\item Obsługa zwrotu
+		\begin{list}{}
+			\item Opis: Klient otrzymuje potwierdzenie/odrzucenie zwrotu
+			\item Dane wejściowe: Wiadomość od klienta
+			\item Wynik: Przy potwierdzeniu zwrotu - zwrot kosztów dla klienta, przy odrzuceniu zwrotu - wiadomość zwrotna dla klienta. 
+		\end{list}
+		
+		\item Odpowiadanie na pytania klientów
+		\begin{list}{}
+			\item Opis: Klient otrzymuje odpowiedź na pytanie
+			\item Dane wejściowe: Wiadomość od klienta
+			\item Wynik: Wiadomość do klienta z odpowiedzią na jego pytania
+		\end{list}
+	\end{itemize}
+	
+	\item Zarządzanie produktami	
+	
+	\begin{itemize}
+		\item Dodanie produktu
+		\begin{list}{}
+			\item Opis: Dodanie produktu do bazy danych
+			\item Dane wejściowe: Dane produktu
+			\item Wynik: Produkt zostaje dodany do bazy danych i występuje w systemie
+		\end{list}
+		
+		\item Usunięcie produktu
+		\begin{list}{}
+			\item Opis: Usunięcie produktu z bazy danych
+			\item Dane wejściowe: Dane produktu
+			\item Wynik: Produkt zostaje usunięty z bazy danych i nie występuje w systemie
+		\end{list}
+		
+		\item Monitorowanie stanu magazynu
+		\begin{list}{}
+			\item Opis: Aktualizacja dostępności produktów w systemie
+			\item Dane wejściowe: Dane produktu
+			\item Wynik: Produkt zostaje oznaczony jako dostępny/niedostępny 
+		\end{list}
+	\end{itemize}
+
+	\item Zarządzanie kontami pracowników
+	\begin{itemize}
+	
+		\item Dodawanie kont pracowników
+		\begin{list}{}
+			\item Opis: Dodanie pracownika do systemu
+			\item Dane wejściowe: Dane pracownika
+			\item Wynik: Pracownik znajduje się bazie danych 
+		\end{list}
+		
+		\item Edytowanie kont pracowników
+		\begin{list}{}
+			\item Opis: Edycja konta pracownika
+			\item Dane wejściowe: Dane pracownika
+			\item Wynik: Zmodyfikowane dane pracownika znajdują się w systemie
+		\end{list}
+		
+		\item Usuwanie kont pracowników
+		\begin{list}{}
+			\item Opis: Usunięcie konta pracownika
+			\item Dane wejściowe: Dane pracownika
+			\item Wynik: Konto pracownika nie znajduje się w bazie danych
+		\end{list}
+		
+	\end{itemize}
+	
+	\item Zarządzanie kontami klientów
+	\begin{itemize}
+		\item Dodawanie kont klientów
+		\begin{list}{}
+			\item Opis: Dodanie klienta do systemu
+			\item Dane wejściowe: Dane klienta
+			\item Wynik: Klient znajduje się bazie danych 
+		\end{list}
+		
+		\item Edytowanie kont klientów
+		\begin{list}{}
+			\item Opis: Edycja konta klienta
+			\item Dane wejściowe: Dane klienta
+			\item Wynik: Zmodyfikowane dane klienta znajdują się w systemie
+		\end{list}
+		
+		\item Usuwanie kont klientów
+		\begin{list}{}
+			\item Opis: Usunięcie konta klienta
+			\item Dane wejściowe: Dane klienta
+			\item Wynik: Konto klienta nie znajduje się w bazie danych
+		\end{list}
+	
+	\end{itemize}
+	
+	\item Zarządzanie zamówieniami
+		\begin{itemize}
+		\item Potwierdzenie zamówienia
+		\begin{list}{}
+			\item Opis: Przyjęcie zamówienia do realizacji
+			\item Dane wejściowe: Dane zamówienia
+			\item Wynik: Wysłana zostaje informacja do klienta, że jego zamówienie będzie realizowane
+		\end{list}
+		
+		\item Anulowanie zamówienia
+		\begin{list}{}
+			\item Opis: Nieprzyjęcie zamówienia do realizacji
+			\item Dane wejściowe: Dane zamówienia
+			\item Wynik: Wysłana zostaje informacja do klienta, że jego zamówienie nie będzie realizowane
+		\end{list}
+		\end{itemize}
+\end{enumerate}
+
+\section {Diagram kontekstowy DFD0}
+
+\begin{figure}[ht]
+\includegraphics[width=14cm]{Diagramy/DFD0.png}
+\caption{Diagram kontekstowy DFD0.}
+\centering
 \end{figure}
 
 \end{document}
