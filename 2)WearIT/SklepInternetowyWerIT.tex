@@ -15,6 +15,13 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{graphicx} 
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pdfpages}
 \frenchspacing
 \pagestyle{fancyplain}
 \fancyhf{}
@@ -114,38 +121,35 @@ Projektowany system będzie odpowiedzialny za obsługę składanych zamówień i
 
 \subsection {Diagram przypadków użycia}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=12cm]{Diagramy/PrzypadkiUzycia/Admin.jpeg}
-\caption{Diagram przypadku użycia przez administratora.}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/PrzypadkiUzycia/Admin.jpeg}
+	\caption{Diagram przypadku użycia przez administratora.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/PrzypadkiUzycia/Pracownik.jpeg}
+	\caption{Diagram przypadku użycia przez pracownika.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/PrzypadkiUzycia/Niezalogowany.jpeg}
+	\caption{Diagram przypadku użycia przez niezalogowanego użytkownika.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/PrzypadkiUzycia/Zalogowany.jpeg}
+	\caption{Diagram przypadku użycia przez zalogowanego użytkownika.}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=12cm]{Diagramy/PrzypadkiUzycia/Pracownik.jpeg}
-\caption{Diagram przypadku użycia przez pracownika.}
-
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=11cm]{Diagramy/PrzypadkiUzycia/Zalogowany.jpeg}
-\caption{Diagram przypadku użycia przez zalogowanego użytkownika.}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=11cm]{Diagramy/PrzypadkiUzycia/Niezalogowany.jpeg}
-\caption{Diagram przypadku użycia przez niezalogowanego użytkownika.}
-\end{figure}
 
 \section {Hierarchiczny model funkcji systemu informatycznego}
 \subsection {Diagram hierarchii funkcji.}
 
-\begin{figure}[h]
-\includegraphics[width=16cm]{Diagramy/HierarchiiFunkcji.png}
-\caption{Diagram hierarchii funkcji.}
-\centering
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\textwidth]{Diagramy/HierarchiiFunkcji.png}
+	\caption{Diagram hierarchii funkcji.}
 \end{figure}
 
 \subsection {Opis diagramu hierarchii funkcji.}
@@ -270,10 +274,108 @@ Projektowany system będzie odpowiedzialny za obsługę składanych zamówień i
 
 \section {Diagram kontekstowy DFD0}
 
-\begin{figure}[ht]
-\includegraphics[width=14cm]{Diagramy/DFD0.png}
-\caption{Diagram kontekstowy DFD0.}
-\centering
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0.png}
+	\caption{Diagram kontekstowy DFD0.}
 \end{figure}
 
+\section {Projekt struktury funkcjonalnej systemu.}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD1.png}
+	\caption{Diagram DFD zarządzania pracownikiem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD2.png}
+	\caption{Diagram DFD zarządzania administratorem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD3.png}
+	\caption{Diagram DFD zarządzania zamówieniami.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD11.png}
+	\caption{Diagram DFD obsługi formularza kontaktowego.}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD12.png}
+	\caption{Diagram DFD zarządzania produktami.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-pracownik-produkt.png}
+	\caption{Diagram DFD zarządzania produktami z niższego poziomu.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD22.png}
+	\caption{Diagram DFD zarządzania kontem pracownika.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD21.png}
+	\caption{Diagram DFD zarządzania kontem klienta.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-admin-pracownik.png}
+	\caption{Diagram DFD zarządzania kontem pracownika z niższego poziomu.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-admin-klient.png}
+	\caption{Diagram DFD zarządzania kontem klienta z niższego poziomu.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Diagramy/DFD0-DFD-Zamowienie.png}
+	\caption{Diagram DFD zamówień.}
+\end{figure}
+
+\section {Projekt struktury informacyjnej.}
+\subsection {Model Konceptualny – Diagram ERD.}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.9\textwidth]{Diagramy/DFD0-Baza-Danych.png}
+	\caption{Diagram ERD.}
+\end{figure}
+
+\subsection {Model implementacyjny – Diagram Klas.}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\textwidth]{Diagramy/DFD0-Diagram-UML.png}
+	\caption{Diagram klas.}
+\end{figure}
+
+\section {Słownik danych}
+\includepdf[pages=-]{Slowniczek.pdf}
+
+\section {Projekt interfejsu użytkownika.}
+\subsection {Koncepcja Interfejsu użytkownika.}
+Interfejs użytkownika zostanie stworzony przy użyciu technologii html i css. Interfejs będzie przejrzysty oraz intuicyjny. 
+
+\includepdf[pages=-]{Uzytkownicy.pdf}
+
+\section {Struktura techniczno-przestrzenna systemu.}
+System będzie dostępny z poziomu każdej przeglądarki internetowej (Internet Explorer także). System, w zależności od rodzaju otrzymanych uprawnień, będzie umożliwiał różne, wyżej wymienione funkcje. Logika systemu zostanie wykonana w języku Java. 
+
 \end{document}
+
